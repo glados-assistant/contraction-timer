@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Contraction Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>Contraction Timer</h1>
+        <p>Track start time, duration, and interval between contractions.</p>
+      </header>
+
+      <section class="status-card">
+        <div class="status-row">
+          <span class="label">Status</span>
+          <strong id="statusText">Ready</strong>
+        </div>
+        <div class="timers">
+          <div class="metric">
+            <span class="label">Current duration</span>
+            <strong id="currentDuration">00:00</strong>
+          </div>
+          <div class="metric">
+            <span class="label">Time since last start</span>
+            <strong id="timeSinceLastStart">--:--</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="startBtn" class="btn btn-primary">Start contraction</button>
+        <button id="endBtn" class="btn btn-danger" disabled>End contraction</button>
+      </section>
+
+      <section class="summary-grid">
+        <div class="summary-card">
+          <span class="label">Total logged</span>
+          <strong id="totalCount">0</strong>
+        </div>
+        <div class="summary-card">
+          <span class="label">Average duration</span>
+          <strong id="avgDuration">--:--</strong>
+        </div>
+        <div class="summary-card">
+          <span class="label">Average interval</span>
+          <strong id="avgInterval">--:--</strong>
+        </div>
+      </section>
+
+      <section class="alert-card" id="adviceCard">
+        <strong>Pattern check</strong>
+        <p id="adviceText">Not enough data yet.</p>
+      </section>
+
+      <section class="history">
+        <div class="history-head">
+          <h2>Contractions</h2>
+          <button id="clearBtn" class="btn btn-ghost">Clear all</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
