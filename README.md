@@ -75,7 +75,21 @@ http://localhost:8787
 If you want to keep it running on a Linux machine, you can install the included systemd unit:
 - `contraction-timer.service`
 
-Adjust paths/user if needed for your machine.
+The service file in this repo intentionally uses placeholders and must be edited before use.
+
+Replace these values first:
+- `User=<YOUR_LINUX_USER>`
+- `WorkingDirectory=<PATH_TO_CONTRACTION_TIMER_PROJECT>`
+- `ExecStart=/usr/bin/python3 <PATH_TO_CONTRACTION_TIMER_PROJECT>/server.py`
+
+Example:
+```ini
+User=youruser
+WorkingDirectory=/home/youruser/projects/contraction-timer
+ExecStart=/usr/bin/python3 /home/youruser/projects/contraction-timer/server.py
+```
+
+Then install it with systemd on your machine.
 
 ## Notes
 - This is a practical timing tool, not medical advice.
