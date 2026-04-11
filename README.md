@@ -89,7 +89,8 @@ User=youruser
 WorkingDirectory=/home/youruser/projects/contraction-timer
 ExecStart=/usr/bin/python3 /home/youruser/projects/contraction-timer/server.py
 # Optional:
-# ```
+Environment=PORT=9999
+```
 
 Then install it with systemd on your machine.
 
