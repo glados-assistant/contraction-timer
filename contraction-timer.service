@@ -6,6 +6,8 @@ After=network.target
 Type=simple
 User=<YOUR_LINUX_USER>
 WorkingDirectory=<PATH_TO_CONTRACTION_TIMER_PROJECT>
+# Optional: override the default port used by server.py
+# Environment=PORT=<YOUR_PORT>
 ExecStart=/usr/bin/python3 <PATH_TO_CONTRACTION_TIMER_PROJECT>/server.py
 Restart=always
 RestartSec=3

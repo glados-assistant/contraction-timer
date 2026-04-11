@@ -81,13 +81,15 @@ Replace these values first:
 - `User=<YOUR_LINUX_USER>`
 - `WorkingDirectory=<PATH_TO_CONTRACTION_TIMER_PROJECT>`
 - `ExecStart=/usr/bin/python3 <PATH_TO_CONTRACTION_TIMER_PROJECT>/server.py`
+- optional: `Environment=PORT=<YOUR_PORT>`
 
 Example:
 ```ini
 User=youruser
 WorkingDirectory=/home/youruser/projects/contraction-timer
 ExecStart=/usr/bin/python3 /home/youruser/projects/contraction-timer/server.py
-```
+# Optional:
+# ```
 
 Then install it with systemd on your machine.
 
