@@ -2,6 +2,10 @@
 
 A lightweight mobile-friendly web app for tracking labor contractions.
 
+## Preview
+
+![Contraction Timer preview](assets/preview.png)
+
 ## What it does
 This app helps track:
 - exact contraction start time
